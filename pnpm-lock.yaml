@@ -20,6 +20,9 @@ importers:
 
   apps/http-backend:
     dependencies:
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../../packages/db
       '@types/jsonwebtoken':
         specifier: ^9.0.10
         version: 9.0.10
@@ -107,10 +110,6 @@ importers:
       '@types/node':
         specifier: ^22.15.3
         version: 22.15.3
-    devDependencies:
-      '@repo/backend-common':
-        specifier: workspace:*
-        version: 'link:'
 
   packages/common:
     dependencies:
